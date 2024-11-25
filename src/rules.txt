@@ -1,0 +1,10 @@
+          {
+            "field": "subject",
+            "predicate": "contains",
+            "value": "JLCPCB"
+          }          
+          
+          {
+             "type": "move",
+             "value": "finance"
+          },

@@ -1,0 +1,21 @@
+{
+    "rules": [
+      {
+        "name": "mark unread",
+        "match_type": "all",
+        "conditions": [
+          {
+            "field": "from",
+            "predicate": "contains",
+            "value": "jlcpcb.com"
+          }
+        ],
+        "actions": [
+          {
+            "type": "mark_as",
+            "value": "read"
+          }
+        ]
+      }
+    ] 
+}

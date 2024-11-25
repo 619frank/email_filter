@@ -1,0 +1,22 @@
+auth:
+  scopes:
+    - https://www.googleapis.com/auth/gmail.labels
+    - https://www.googleapis.com/auth/gmail.modify
+  credentials_path: configs/credentials.json
+  token_path: configs/token.pickle
+
+  oauth:
+    redirect_uri: http://localhost:5000
+    server:
+      host: localhost
+      port: 5000
+    success_message: Authentication successful! You can close this window.
+    error_message: Authentication failed. Please try again.  
+
+email:
+  max_results_default: 10
+  charset: utf-8
+
+logging:
+  level: INFO
+  file: logs/gmail_fetcher.log
