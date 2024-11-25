@@ -1,10 +1,95 @@
+example: 1
+{
+    "rules": [
+      {
+        "name": "mark unread",
+        "match_type": "all",
+        "conditions": [
+          {
+            "field": "from",
+            "predicate": "contains",
+            "value": "jlcpcb.com"
+          }
+        ],
+        "actions": [
+          {
+            "type": "mark_as",
+            "value": "read"
+          },
+          {
+            "type": "move",
+            "value": "happy_fox"
+          }
+        ]
+      }
+    ] 
+}
+
+Example {
+    "rules": [
+      {
+        "name": "Example 2",
+        "match_type": "any",
+        "conditions": [
+          {
+            "field": "from",
+            "predicate": "contains",
+            "value": "jlcpcb.com"
+          },
           {
             "field": "subject",
             "predicate": "contains",
-            "value": "JLCPCB"
-          }          
-          
+            "value": "delivery"
+          }   
+        ],
+        "actions": [
           {
-             "type": "move",
-             "value": "finance"
+            "type": "mark_as",
+            "value": "read"
           },
+          {
+            "type": "move",
+            "value": "happy_fox"
+          }
+        ]
+      }
+    ] 
+}
+
+Example 3
+
+{
+    "rules": [
+      {
+        "name": "Example 2",
+        "match_type": "any",
+        "conditions": [
+          {
+            "field": "from",
+            "predicate": "contains",
+            "value": "jlcpcb.com"
+          },
+          {
+            "field": "subject",
+            "predicate": "contains",
+            "value": "delivery"
+          },
+          {
+            "field":"received_at",
+            "predicate": "less_than",
+            "value": "1_day"
+          }   
+        ],
+        "actions": [
+          {
+            "type": "mark_as",
+            "value": "read"
+          },
+          {
+            "type": "move",
+            "value": "happy_fox"
+          }
+        ]
+      }
+    ] 
+}
